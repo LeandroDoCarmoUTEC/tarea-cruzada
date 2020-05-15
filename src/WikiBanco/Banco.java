@@ -34,7 +34,14 @@ public class Banco {
 	}
 
 	// Métodos
+<<<<<<< Updated upstream
 
+=======
+	/**
+	 * Metodo que agrega un cajero a lista de cajeros del Banco
+	 * @param c Cajero
+	 */
+>>>>>>> Stashed changes
 	public void agregarCajero(Cajero c) {
 		this.listaCajero.add(c);
 	}

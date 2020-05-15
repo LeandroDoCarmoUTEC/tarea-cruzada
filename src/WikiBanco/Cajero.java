@@ -34,7 +34,11 @@ public class Cajero {
 	}
 
 	// Métodos
-
+/**
+ * Metodo creado para calcular el importe de cada cajero 
+ * @return int Importe total del cajero en pesos
+ * @throws Exception si la cantidad de billete es cero, corre excepcion
+ */
 	public int calcularImporte() throws Exception {
 		int importe = 0;
 
