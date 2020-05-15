@@ -1,14 +1,15 @@
 package WikiBanco;
+
 import WikiBanco.Cajero;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		
+
 		Banco Banco1 = new Banco();
 		Banco1.setNombre("Republica");
 		Banco1.setDireccion("Artigas y Chile");
-		
-		
+
 		Cajero Cajero1 = new Cajero();
 		Cajero1.setNombre("Cajero 1");
 		Cajero Cajero2 = new Cajero();
@@ -25,21 +26,19 @@ public class Principal {
 		Cajero7.setNombre("Cajero 7");
 		Cajero Cajero8 = new Cajero();
 		Cajero8.setNombre("Cajero 8");
-		
-	
+
 		Billete Billete500 = new Billete();
 		Billete500.setNombre("Billete de 500");
 		Billete500.setValor(500);
-		
+
 		Billete Billete1000 = new Billete();
 		Billete1000.setNombre("Billete de 1000");
 		Billete1000.setValor(1000);
-		
+
 		Billete Billete2000 = new Billete();
 		Billete2000.setNombre("Billete de 2000");
 		Billete2000.setValor(2000);
-		
-		
+
 		Banco1.agregarCajero(Cajero1);
 		Banco1.agregarCajero(Cajero2);
 		Banco1.agregarCajero(Cajero3);
@@ -48,31 +47,31 @@ public class Principal {
 		Banco1.agregarCajero(Cajero6);
 		Banco1.agregarCajero(Cajero7);
 		Banco1.agregarCajero(Cajero8);
-		
+
 		Cajero1.AgregarBillete(Billete500);
 		Cajero1.AgregarBillete(Billete1000);
 		Cajero1.AgregarBillete(Billete2000);
-		
+
 		Cajero1.mapCantidad.put(Billete500, 1000);
 		Cajero1.mapCantidad.put(Billete1000, 500);
 		Cajero1.mapCantidad.put(Billete2000, 100);
-		
+
 		Cajero2.AgregarBillete(Billete500);
 		Cajero2.AgregarBillete(Billete1000);
 		Cajero2.AgregarBillete(Billete2000);
-		
+
 		Cajero2.mapCantidad.put(Billete500, 10000);
 		Cajero2.mapCantidad.put(Billete1000, 500);
 		Cajero2.mapCantidad.put(Billete2000, 1000);
-		
+
 		Cajero3.AgregarBillete(Billete500);
 		Cajero3.AgregarBillete(Billete1000);
 		Cajero3.AgregarBillete(Billete2000);
-	
+
 		Cajero3.mapCantidad.put(Billete500, 10);
 		Cajero3.mapCantidad.put(Billete1000, 500);
 		Cajero3.mapCantidad.put(Billete2000, 2000);
-		
+
 		Cajero4.AgregarBillete(Billete500);
 		Cajero4.AgregarBillete(Billete1000);
 		Cajero4.AgregarBillete(Billete2000);
@@ -80,7 +79,7 @@ public class Principal {
 		Cajero4.mapCantidad.put(Billete500, 1);
 		Cajero4.mapCantidad.put(Billete1000, 5000);
 		Cajero4.mapCantidad.put(Billete2000, 20);
-		
+
 		Cajero5.AgregarBillete(Billete500);
 		Cajero5.AgregarBillete(Billete1000);
 		Cajero5.AgregarBillete(Billete2000);
@@ -88,7 +87,7 @@ public class Principal {
 		Cajero5.mapCantidad.put(Billete500, 1000);
 		Cajero5.mapCantidad.put(Billete1000, 50);
 		Cajero5.mapCantidad.put(Billete2000, 2000);
-			
+
 		Cajero6.AgregarBillete(Billete500);
 		Cajero6.AgregarBillete(Billete1000);
 		Cajero6.AgregarBillete(Billete2000);
@@ -96,15 +95,15 @@ public class Principal {
 		Cajero6.mapCantidad.put(Billete500, 10);
 		Cajero6.mapCantidad.put(Billete1000, 50);
 		Cajero6.mapCantidad.put(Billete2000, 2);
-					
+
 		Cajero7.AgregarBillete(Billete500);
 		Cajero7.AgregarBillete(Billete1000);
 		Cajero7.AgregarBillete(Billete2000);
 
-		Cajero7.mapCantidad.put(Billete500, 1000);
+		Cajero7.mapCantidad.put(Billete500, 0);
 		Cajero7.mapCantidad.put(Billete1000, 5);
 		Cajero7.mapCantidad.put(Billete2000, 200);
-						
+
 		Cajero8.AgregarBillete(Billete500);
 		Cajero8.AgregarBillete(Billete1000);
 		Cajero8.AgregarBillete(Billete2000);
@@ -112,21 +111,13 @@ public class Principal {
 		Cajero8.mapCantidad.put(Billete500, 10);
 		Cajero8.mapCantidad.put(Billete1000, 5000);
 		Cajero8.mapCantidad.put(Billete2000, 200);
-		
-		
+
 		try {
-			System.out.println(Cajero1.toString());
-			System.out.println(Cajero2.toString());
-			System.out.println(Cajero3.toString());
-			System.out.println(Cajero4.toString());
-			System.out.println(Cajero5.toString());
-			System.out.println(Cajero6.toString());
-			System.out.println(Cajero7.toString());
-			System.out.println(Cajero8.toString());
+			Banco1.recorrerCajeros();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 	}
 
 }

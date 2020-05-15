@@ -35,12 +35,17 @@ public class Cajero {
 
 	// Métodos
 
-	public int calcularImporte() {
+	public int calcularImporte() throws Exception {
 		int importe = 0;
 
 		for (Map.Entry<Billete, Integer> mapCant : mapCantidad.entrySet()) {
 			Billete bi = mapCant.getKey();
-			importe += bi.getValor() + mapCant.getValue();
+			if (mapCant.getValue() > 0) {
+							importe += bi.getValor() * mapCant.getValue();
+			} else {
+				throw new Exception( this.nombre + " -> No hay " + bi.getNombre());
+			}
+
 		}
 
 		return importe;
@@ -52,7 +57,15 @@ public class Cajero {
 	}
 
 	public String toString() {
-		int i = calcularImporte();
-		return this.nombre + ": $" + i;
+		String msj = "";
+		try {
+			int i = calcularImporte();
+			msj = this.nombre + ": $" + i;
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+
+		}
+		return msj;
 	}
 }
