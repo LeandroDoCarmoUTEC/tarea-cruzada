@@ -4,7 +4,7 @@ import java.util.LinkedList;
 public class Banco {
 	private String nombre;
 	private String direccion;
-	private LinkedList<Cajero> ListaCajero = new LinkedList<Cajero>();
+	private LinkedList<Cajero> listaCajero = new LinkedList<Cajero>();
 	
 	
 	
@@ -20,17 +20,17 @@ public class Banco {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public LinkedList<Cajero> getListaCajero() {
-		return ListaCajero;
+	public LinkedList<Cajero> getlistaCajero() {
+		return listaCajero;
 	}
 	public void setListaCajero(LinkedList<Cajero> listaCajero) {
-		ListaCajero = listaCajero;
+		this.listaCajero = listaCajero;
 	}
 	
 	
 	//Métodos	
 	public void agregarCajero(Cajero c) {
-		this.ListaCajero.add(c);
+		this.listaCajero.add(c);
 	}
 	
 }
