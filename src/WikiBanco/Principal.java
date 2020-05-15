@@ -112,6 +112,22 @@ public class Principal {
 		Cajero8.mapCantidad.put(Billete1000, 5000);
 		Cajero8.mapCantidad.put(Billete2000, 200);
 
+		// MUESTRO EL PRIMER CAJERO
+		try {
+			Banco1.devolverPrimerCajero();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		// MUESTRO EL ÚLTIMO CAJERO
+		try {
+			Banco1.devolverUltimoCajero();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("");
+
+		// RECORRO LOS CAJEROS DEL BANCO
 		try {
 			Banco1.recorrerCajeros();
 		} catch (Exception e) {
