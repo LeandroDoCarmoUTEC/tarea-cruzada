@@ -1,6 +1,7 @@
 package WikiBanco;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.LinkedList;
 
 public class Cajero {
@@ -34,15 +35,15 @@ public class Cajero {
 
 	// Métodos
 
-	public int calcularImporte() throws Exception {
-		int cantidad = 0;
-int monto = 0;
-		for (int i : mapCantidad.values()) {
-			monto = mapCantidad.
-			cantidad += i;
+	public int calcularImporte() {
+		int importe = 0;
+
+		for (Map.Entry<Billete, Integer> mapCant : mapCantidad.entrySet()) {
+			Billete bi = mapCant.getKey();
+			importe += bi.getValor() + mapCant.getValue();
 		}
 
-		return cantidad;
+		return importe;
 	}
 
 	public void AgregarBillete(Billete b) {
@@ -50,5 +51,8 @@ int monto = 0;
 
 	}
 
-	public String toString() {return this.nombre + "; " + calcularImporte();}
+	public String toString() {
+		int i = calcularImporte();
+		return this.nombre + ": $" + i;
+	}
 }

@@ -115,7 +115,14 @@ public class Principal {
 		
 		
 		try {
-			System.out.println(Cajero1.CalcularImporte());
+			System.out.println(Cajero1.toString());
+			System.out.println(Cajero2.toString());
+			System.out.println(Cajero3.toString());
+			System.out.println(Cajero4.toString());
+			System.out.println(Cajero5.toString());
+			System.out.println(Cajero6.toString());
+			System.out.println(Cajero7.toString());
+			System.out.println(Cajero8.toString());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
